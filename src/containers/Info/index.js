@@ -17,7 +17,7 @@ const Info = () => {
 
   return (
     <div className='flights'>
-      {!loading && <span>There are {flightsCount && flightsCount.length} flight now.</span>}
+      {!loading && <span>There are {flightsCount && flightsCount.length} flights now.</span>}
       {loading && <Spinner color="primary" />}
     </div>
   );
