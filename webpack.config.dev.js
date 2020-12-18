@@ -83,7 +83,8 @@ module.exports = {
   ],
   externals: {
     config: JSON.stringify({
-      apiUrl: process.env.API_URL
+      apiUrl: process.env.API_URL,
+      openSkyUrl: process.env.OPEN_SKY
     })
   },
   node: {

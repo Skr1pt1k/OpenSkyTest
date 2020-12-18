@@ -34,10 +34,10 @@ const LoginComponent = ({handleSubmitRequest, sessionError}) => {
                 onChange={ handleChange }
                 value={ values.email || '' }
                 invalid={ (isSubmitting && errors.email === 'Email address is invalid') || sessionError }
-                valid={ isSubmitting && errors.email === undefined  }
+                valid={ isSubmitting && !errors.email }
                 required
               />
-              { errors.email ? <FormFeedback>{errors.email}</FormFeedback> : null }
+              {errors.email ? <FormFeedback>{errors.email}</FormFeedback> : null}
             </FormGroup>
           </Col>
           <Col className='auth__col'>
@@ -55,8 +55,8 @@ const LoginComponent = ({handleSubmitRequest, sessionError}) => {
                 valid={ isSubmitting && !errors.password }
                 required
               />
-              { errors.password ? <FormFeedback>{errors.password}</FormFeedback> : null}
-              { sessionError ? <span className='form-auth__error'>{sessionError}</span> : null}
+              {errors.password ? <FormFeedback>{errors.password}</FormFeedback> : null}
+              {sessionError ? <span className='form-auth__error'>{sessionError}</span> : null}
             </FormGroup>
           </Col>
           <Button className='form-auth__button font-weight-bold font-size-10' type='submit'>Login</Button>

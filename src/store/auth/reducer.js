@@ -15,7 +15,7 @@ export const authReducer = (state = initialState, action) => {
   case authConstants.SESSION_CREATE_SUCCESS:
     return {
       ...state,
-      currentSession: payload,
+      currentSession: payload.data,
       authenticated: true,
       fetching: false
     };

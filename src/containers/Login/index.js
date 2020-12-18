@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {useDispatch, useSelector} from 'react-redux';
 
 import LoginComponent from '../../components/Login';
@@ -17,12 +16,6 @@ const Login = () => {
   return (
     <LoginComponent handleSubmitRequest={ handleSubmit } sessionError={ error } />
   );
-};
-
-Login.propTypes = {
-  handleSubmitRequest: PropTypes.func,
-  sessionError: PropTypes.string,
-  history: PropTypes.object
 };
 
 export default Login;
